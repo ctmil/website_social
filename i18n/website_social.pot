@@ -1,0 +1,75 @@
+# Translation of Odoo Server. This file contains the translation of the following modules:
+#	* website_social
+#
+msgid "" msgstr "" "Project-Id-Version: Odoo Server 10.0\n" "Report-Msgid-Bugs-To: \n" "POT-Creation-Date: 2018-12-29 02:35+0000\n" "PO-Revision-Date: 
+2018-12-29 02:35+0000\n" "Last-Translator: <>\n" "Language-Team: \n" "MIME-Version: 1.0\n" "Content-Type: text/plain; charset=UTF-8\n" 
+"Content-Transfer-Encoding: \n" "Plural-Forms: \n"
+#. module: website_social
+#: model:ir.ui.view,arch_db:website_social.extension
+msgid "+0000000000000" msgstr ""
+#. module: website_social
+#: model:ir.model.fields,field_description:website_social.field_website_config_settings_social_bitbucket 
+#: model:ir.model.fields,field_description:website_social.field_website_social_bitbucket
+msgid "BitBucket Account" msgstr ""
+#. module: website_social
+#: model:ir.model.fields,field_description:website_social.field_website_config_settings_social_flickr 
+#: model:ir.model.fields,field_description:website_social.field_website_social_flickr
+msgid "Flickr Account" msgstr ""
+#. module: website_social
+#: model:ir.model.fields,field_description:website_social.field_website_config_settings_social_instagram 
+#: model:ir.model.fields,field_description:website_social.field_website_social_instagram
+msgid "Instagram Account" msgstr ""
+#. module: website_social
+#: model:ir.ui.view,arch_db:website_social.extension
+msgid "OrganizationSkype" msgstr ""
+#. module: website_social
+#: model:ir.model.fields,field_description:website_social.field_website_config_settings_social_reddit 
+#: model:ir.model.fields,field_description:website_social.field_website_social_reddit
+msgid "Reddit Account" msgstr ""
+#. module: website_social
+#: model:ir.model.fields,field_description:website_social.field_website_config_settings_social_skype 
+#: model:ir.model.fields,field_description:website_social.field_website_social_skype
+msgid "Skype Account" msgstr ""
+#. module: website_social
+#: model:ir.model.fields,field_description:website_social.field_website_config_settings_social_tumblr 
+#: model:ir.model.fields,field_description:website_social.field_website_social_tumblr
+msgid "Tumblr Account" msgstr ""
+#. module: website_social
+#: model:ir.model.fields,field_description:website_social.field_website_config_settings_social_twitch 
+#: model:ir.model.fields,field_description:website_social.field_website_social_twitch
+msgid "Twitch Account" msgstr ""
+#. module: website_social
+#: model:ir.model.fields,field_description:website_social.field_website_config_settings_social_vimeo 
+#: model:ir.model.fields,field_description:website_social.field_website_social_vimeo
+msgid "Vimeo Account" msgstr ""
+#. module: website_social
+#: model:ir.model,name:website_social.model_website
+msgid "Website" msgstr ""
+#. module: website_social
+#: model:ir.model.fields,field_description:website_social.field_website_config_settings_social_whatsapp 
+#: model:ir.model.fields,field_description:website_social.field_website_social_whatsapp
+msgid "Whatsapp Number" msgstr ""
+#. module: website_social
+#: model:ir.ui.view,arch_db:website_social.extension
+msgid "http://bitbucket.org/organization" msgstr ""
+#. module: website_social
+#: model:ir.ui.view,arch_db:website_social.extension
+msgid "https://instagram.com/organization" msgstr ""
+#. module: website_social
+#: model:ir.ui.view,arch_db:website_social.extension
+msgid "https://vimeo.com/organization" msgstr ""
+#. module: website_social
+#: model:ir.ui.view,arch_db:website_social.extension
+msgid "https://www.flickr.com/photos/organization" msgstr ""
+#. module: website_social
+#: model:ir.ui.view,arch_db:website_social.extension
+msgid "https://www.reddit.com/user/organization" msgstr ""
+#. module: website_social
+#: model:ir.ui.view,arch_db:website_social.extension
+msgid "https://www.tumblr.com/organization" msgstr ""
+#. module: website_social
+#: model:ir.ui.view,arch_db:website_social.extension
+msgid "https://www.twitch.tv/organization" msgstr ""
+#. module: website_social
+#: model:ir.model,name:website_social.model_website_config_settings
+msgid "website.config.settings" msgstr ""
