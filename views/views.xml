@@ -52,7 +52,7 @@
 		<label for="social_tumblr"/>
                 <div name="social_tumblr">
                      <div class="oe_inline">
-                        <field name="social_tumblr" placeholder="https://www.tumblr.com/organization"/>
+                        <field name="social_tumblr" placeholder="https://www.organization.tumblr.com"/>
                      </div>
                 </div>
 		<label for="social_flickr"/>
