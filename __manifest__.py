@@ -13,9 +13,9 @@
     'website': "https://www.moldeointeractive.com.ar",
 
     'category': 'Website',
-    'version': '10.0',
+    'version': '1.1',
 
-    'depends': ['base', 'website', 'website_sale'],
+    'depends': ['base', 'website'],
 
     'data': [
         'views/views.xml',
