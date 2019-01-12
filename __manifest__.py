@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "website_social",
+    'name': "Website Social Extension",
 
     'summary': """
         Extension for add more Social Networks to Odoo""",
