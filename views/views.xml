@@ -91,7 +91,7 @@
 			<a t-att-href="website.social_reddit" target="_blank" t-if="website.social_reddit">
                              <i class="fa fa-reddit"/>
                         </a>
-                        <a t-att-href="'https://api.whatsapp.com/send?phone=:%s' % website.social_whatsapp" t-att-title="website.social_whatsapp" target="_blank" t-if="website.social_whatsaap">
+                        <a t-att-href="'https://api.whatsapp.com/send?phone=:%s' % website.social_whatsapp" t-att-title="website.social_whatsapp" target="_blank" t-if="website.social_whatsapp">
                              <i class="fa fa-whatsapp"/>
                         </a>
 			<a t-att-href="'skype:%s' % website.social_skype" t-att-title="website.social_skype" target="_blank" t-if="website.social_skype">
