@@ -3,63 +3,41 @@
 
     <record id="website_social.extension" model="ir.ui.view">
       <field name="name">Website Social Extension</field>
-      <field name="model">website.config.settings</field>
-      <field name="inherit_id" ref="website.view_website_config_settings"/>
+      <field name="model">res.config.settings</field>
+      <field name="inherit_id" ref="website.res_config_settings_view_form"/>
       <field name="arch" type="xml">
-       	<xpath expr="//group[@name='social']" position="inside">
-		<label for="social_instagram"/>
-		<div name="social_instagram">
-		     <div class="oe_inline">
-			<field name="social_instagram" placeholder="https://instagram.com/organization"/>
-                     </div>
+       	<xpath expr="//div/div[@id='website_settings']/div[12]/div[@class='o_setting_right_pane']/div[@class='content-group']" position="inside">
+		<div class="row">
+			<label for="social_bitbucket" string="BitBucket" class="col-md-3 o_light_label"/>
+                        <field name="social_bitbucket"/>
+		</div>
+		<div class="row">
+			<label for="social_vimeo" string="Vimeo" class="col-md-3 o_light_label"/>
+                        <field name="social_vimeo" />
+		</div>
+		<div class="row">
+			<label for="social_whatsapp" string="WhatsApp" class="col-md-3 o_light_label"/>
+                        <field name="social_whatsapp"/>
+		</div>
+		<div class="row">
+			<label for="social_skype" string="Skype" class="col-md-3 o_light_label"/>
+                        <field name="social_skype"/>
                 </div>
-		<label for="social_bitbucket"/>
-                <div name="social_bitbucket">
-                     <div class="oe_inline">
-                        <field name="social_bitbucket" placeholder="http://bitbucket.org/organization"/>
-                     </div>
+		<div class="row">
+			<label for="social_twitch" string="Twitch" class="col-md-3 o_light_label"/>
+                        <field name="social_twitch"/>
                 </div>
-		<label for="social_vimeo"/>
-                <div name="social_vimeo">
-                     <div class="oe_inline">
-                        <field name="social_vimeo" placeholder="https://vimeo.com/organization"/>
-                     </div>
+		<div class="row">
+			<label for="social_reddit" string="Reddit" class="col-md-3 o_light_label"/>
+                        <field name="social_reddit"/>
                 </div>
-		<label for="social_whatsapp"/>
-                <div name="social_whatsapp">
-                     <div class="oe_inline">
-                        <field name="social_whatsapp" placeholder="+0000000000000"/>
-                     </div>
+		<div class="row">
+			<label for="social_tumblr" string="Tumblr" class="col-md-3 o_light_label"/>                
+                        <field name="social_tumblr"/>
                 </div>
-		<label for="social_skype"/>
-                <div name="social_skype">
-                     <div class="oe_inline">
-                        <field name="social_skype" placeholder="OrganizationSkype"/>
-                     </div>
-                </div>
-		<label for="social_twitch"/>
-                <div name="social_twitch">
-                     <div class="oe_inline">
-                        <field name="social_twitch" placeholder="https://www.twitch.tv/organization"/>
-                     </div>
-                </div>
-		<label for="social_reddit"/>
-                <div name="social_reddit">
-                     <div class="oe_inline">
-                        <field name="social_reddit" placeholder="https://www.reddit.com/user/organization"/>
-                     </div>
-                </div>
-		<label for="social_tumblr"/>
-                <div name="social_tumblr">
-                     <div class="oe_inline">
-                        <field name="social_tumblr" placeholder="https://www.organization.tumblr.com"/>
-                     </div>
-                </div>
-		<label for="social_flickr"/>
-                <div name="social_flickr">
-                     <div class="oe_inline">
-                        <field name="social_flickr" placeholder="https://www.flickr.com/photos/organization"/>
-                     </div>
+		<div class="row">
+			<label for="social_flickr" string="Flickr" class="col-md-3 o_light_label"/>
+                        <field name="social_flickr"/>
                 </div>
         </xpath>
       </field>
@@ -67,35 +45,32 @@
 
     <record id="website_social_footer" model="ir.ui.view">
         <field name="name">Website Social Footer</field>
-        <field name="inherit_id" ref="website.footer_default"/>
+        <field name="inherit_id" ref="website.footer_custom"/>
         <field name="arch" type="xml">
-                <xpath expr="//h2" position="inside">
-			<a t-att-href="website.social_bitbucket" target="_blank" t-if="website.social_bitbucket">
-                             <i class="fa fa-bitbucket"/>
+                <xpath expr="//div[@id='footer']/section/div/div/div[@id='connect']/p" position="inside">
+			<a t-if="website.social_bitbucket" t-att-href="website.social_bitbucket" target="_blank" class="btn btn-sm btn-link">
+                             <i class="fa fa-2x fa-bitbucket"/>
                         </a>
-                        <a t-att-href="website.social_instagram" target="_blank" t-if="website.social_instagram">
-                             <i class="fa fa-instagram"/>
+                        <a t-if="website.social_vimeo" t-att-href="website.social_vimeo" target="_blank" class="btn btn-sm btn-link">
+                             <i class="fa fa-2x fa-vimeo"/>
                         </a>
-                        <a t-att-href="website.social_vimeo" target="_blank" t-if="website.social_vimeo">
-                             <i class="fa fa-vimeo"/>
+			<a t-if="website.social_twitch" t-att-href="website.social_twitch" target="_blank" class="btn btn-sm btn-link">
+                             <i class="fa fa-2x fa-twitch"/>
                         </a>
-			<a t-att-href="website.social_twitch" target="_blank" t-if="website.social_twitch">
-                             <i class="fa fa-twitch"/>
+			<a t-if="website.social_tumblr" t-att-href="website.social_tumblr" target="_blank" class="btn btn-sm btn-link">
+                             <i class="fa fa-2x fa-tumblr"/>
                         </a>
-			<a t-att-href="website.social_tumblr" target="_blank" t-if="website.social_tumblr">
-                             <i class="fa fa-tumblr"/>
+			<a t-if="website.social_flickr" t-att-href="website.social_flickr" target="_blank" class="btn btn-sm btn-link">
+                             <i class="fa fa-2x fa-flickr"/>
                         </a>
-			<a t-att-href="website.social_flickr" target="_blank" t-if="website.social_flickr">
-                             <i class="fa fa-flickr"/>
+			<a t-if="website.social_reddit" t-att-href="website.social_reddit" target="_blank" class="btn btn-sm btn-link">
+                             <i class="fa fa-2x fa-reddit"/>
                         </a>
-			<a t-att-href="website.social_reddit" target="_blank" t-if="website.social_reddit">
-                             <i class="fa fa-reddit"/>
+                        <a t-if="website.social_whatsapp" t-att-href="'https://api.whatsapp.com/send?phone=:%s' % website.social_whatsapp" t-att-title="website.social_whatsapp" target="_blank" class="btn btn-sm btn-link">
+                             <i class="fa fa-2x fa-whatsapp"/>
                         </a>
-                        <a t-att-href="'https://api.whatsapp.com/send?phone=:%s' % website.social_whatsapp" t-att-title="website.social_whatsapp" target="_blank" t-if="website.social_whatsapp">
-                             <i class="fa fa-whatsapp"/>
-                        </a>
-			<a t-att-href="'skype:%s' % website.social_skype" t-att-title="website.social_skype" target="_blank" t-if="website.social_skype">
-                             <i class="fa fa-skype"/>
+			<a t-if="website.social_skype" t-att-href="'skype:%s' % website.social_skype" t-att-title="website.social_skype" target="_blank" class="btn btn-sm btn-link">
+                             <i class="fa fa-2x fa-skype"/>
                         </a>
                 </xpath>
         </field>
