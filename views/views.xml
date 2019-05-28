@@ -39,6 +39,14 @@
 			<label for="social_flickr" string="Flickr" class="col-md-3 o_light_label"/>
                         <field name="social_flickr"/>
                 </div>
+		<div class="row">
+                        <label for="social_pinterest" string="Pinterest" class="col-md-3 o_light_label"/>
+                        <field name="social_pinterest"/>
+                </div>
+		<div class="row">
+                        <label for="social_houzz" string="Houzz" class="col-md-3 o_light_label"/>
+                        <field name="social_houzz"/>
+                </div>
         </xpath>
       </field>
     </record>
@@ -65,6 +73,12 @@
                         </a>
 			<a t-if="website.social_reddit" t-att-href="website.social_reddit" target="_blank" class="btn btn-sm btn-link">
                              <i class="fa fa-2x fa-reddit"/>
+                        </a>
+			<a t-if="website.social_pinterest" t-att-href="website.social_pinterest" target="_blank" class="btn btn-sm btn-link">
+                             <i class="fa fa-2x fa-pinterest"/>
+                        </a>
+			<a t-if="website.social_houzz" t-att-href="website.social_houzz" target="_blank" class="btn btn-sm btn-link">
+                             <i class="fa fa-2x fa-houzz"/>
                         </a>
                         <a t-if="website.social_whatsapp" t-att-href="'https://api.whatsapp.com/send?phone=:%s' % website.social_whatsapp" t-att-title="website.social_whatsapp" target="_blank" class="btn btn-sm btn-link">
                              <i class="fa fa-2x fa-whatsapp"/>
