@@ -16,6 +16,7 @@ List of Social Networks supported:
 - Tumblr
 - Flickr
 
+Version for Odoo 12
 Available for Odoo 10 & 12
 
 ---
