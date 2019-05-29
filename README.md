@@ -15,6 +15,8 @@ List of Social Networks supported:
 - Reddit
 - Tumblr
 - Flickr
+- Pinterest
+- Houzz
 
 Version for Odoo 10
 Available for Odoo 10 & 12

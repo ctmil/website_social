@@ -14,18 +14,22 @@ class WebsiteSocial(models.Model):
 	social_reddit = fields.Char('Reddit Account')
 	social_tumblr = fields.Char('Tumblr Account')
 	social_flickr = fields.Char('Flickr Account')
+	social_pinterest = fields.Char('Pinterest Account')
+	social_houzz = fields.Char('Houzz Account')
 
 class WebsiteSocialConfig(models.TransientModel):
-        _inherit = 'website.config.settings'
+	_inherit = 'website.config.settings'
 
-        social_instagram = fields.Char(related='website_id.social_instagram')
-        social_bitbucket = fields.Char(related='website_id.social_bitbucket')
-        social_vimeo = fields.Char(related='website_id.social_vimeo')
-        social_whatsapp = fields.Char(related='website_id.social_whatsapp')
+	social_instagram = fields.Char(related='website_id.social_instagram')
+	social_bitbucket = fields.Char(related='website_id.social_bitbucket')
+	social_vimeo = fields.Char(related='website_id.social_vimeo')
+	social_whatsapp = fields.Char(related='website_id.social_whatsapp')
 	social_skype = fields.Char(related='website_id.social_skype')
-        social_twitch = fields.Char(related='website_id.social_twitch')
-        social_reddit = fields.Char(related='website_id.social_reddit')
-        social_tumblr = fields.Char(related='website_id.social_tumblr')
-        social_flickr = fields.Char(related='website_id.social_flickr')
+	social_twitch = fields.Char(related='website_id.social_twitch')
+	social_reddit = fields.Char(related='website_id.social_reddit')
+	social_tumblr = fields.Char(related='website_id.social_tumblr')
+	social_flickr = fields.Char(related='website_id.social_flickr')
+	social_pinterest = fields.Char(related='website_id.social_pinterest')
+	social_houzz = fields.Char(related='website_id.social_houzz')
 
 
