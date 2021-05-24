@@ -18,8 +18,8 @@ List of Social Networks supported:
 - Pinterest
 - Houzz
 
-Version for Odoo 12
-Available for Odoo 10 & 12
+Version for Odoo 13
+Available for Odoo 10, 12 & 13
 
 ---
 

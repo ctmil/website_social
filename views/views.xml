@@ -1,12 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-  <data>
-
     <record id="website_social.extension" model="ir.ui.view">
       <field name="name">Website Social Extension</field>
       <field name="model">res.config.settings</field>
       <field name="inherit_id" ref="website.res_config_settings_view_form"/>
       <field name="arch" type="xml">
-       	<xpath expr="//div/div[@id='website_settings']/div[11]/div[@class='o_setting_right_pane']/div[@class='content-group']" position="inside">
+       	<xpath expr="//field[@name='has_social_network']/../../div[@class='o_setting_right_pane']/div[@class='content-group']" position="inside">
+
 		<div class="row">
 			<label for="social_bitbucket" string="BitBucket" class="col-md-3 o_light_label"/>
                         <field name="social_bitbucket"/>
@@ -50,7 +50,7 @@
         </xpath>
       </field>
     </record>
-
+<!-- 
     <record id="website_social_footer" model="ir.ui.view">
         <field name="name">Website Social Footer</field>
         <field name="inherit_id" ref="website.footer_custom"/>
@@ -88,7 +88,6 @@
                         </a>
                 </xpath>
         </field>
-    </record>
+    </record> -->
 
-  </data>
 </odoo>

@@ -30,3 +30,31 @@ class WebsiteSocialConfig(models.TransientModel):
 	social_pinterest = fields.Char(related='website_id.social_pinterest', readonly=False)
 	social_houzz = fields.Char(related='website_id.social_houzz', readonly=False)
 
+	@api.depends('website_id', 'social_twitter', 'social_facebook', 'social_github', 'social_linkedin', 'social_youtube', 'social_instagram', 'social_bitbucket', 'social_vimeo', 'social_whatsapp', 'social_skype', 'social_twitch', 'social_reddit', 'social_tumblr', 'social_flickr','social_pinterest','social_houzz')
+	def has_social_network(self):
+		self.has_social_network = self.social_twitter or self.social_facebook or self.social_github \
+            or self.social_linkedin or self.social_youtube or self.social_instagram or self.social_bitbucket or self.social_vimeo \
+			or self.social_whatsapp or self.social_skype or self.social_twitch \
+			or self.social_reddit or self.social_tumblr or self.social_flickr \
+			or self.social_pinterest or self.social_houzz
+
+	def inverse_has_social_network(self):
+		if not self.has_social_network:
+			self.social_twitter = ''
+			self.social_facebook = ''
+			self.social_github = ''
+			self.social_linkedin = ''
+			self.social_youtube = ''
+			self.social_instagram = ''
+			self.social_bitbucket = ''
+			self.social_vimeo = ''
+			self.social_whatsapp = ''
+			self.social_skype = ''
+			self.social_twitch = ''
+			self.social_reddit = ''
+			self.social_tumblr = ''
+			self.social_flickr = ''
+			self.social_pinterest = ''
+			self.social_houzz = ''
+
+	has_social_network = fields.Boolean("Configure Social Network", compute=has_social_network, inverse=inverse_has_social_network)
