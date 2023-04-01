@@ -16,6 +16,17 @@ class WebsiteSocial(models.Model):
 	social_pinterest = fields.Char('Pinterest Account')
 	social_houzz = fields.Char('Houzz Account')
 
+	social_instagram_username = fields.Char(
+		compute='_compute_social_instagram_username',
+	)
+
+	def _get_username_from_url(self, url):
+		return url and [p for p in url.split('/') if p][-1] or ''	
+
+	@api.depends('company_id.social_instagram')
+	def _compute_social_instagram_username(self):
+		self.social_instagram_username = self._get_username_from_url( self.company_id.social_instagram)	
+
 class WebsiteSocialConfig(models.TransientModel):
 	_inherit = 'res.config.settings'
 
